@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  vim-container:
+    container_name: my-vim-container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./dotfiles:/root/dotfiles
+      - ./:/workspace
+    working_dir: /workspace
+    command: tail -f /dev/null
