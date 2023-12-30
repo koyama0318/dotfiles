@@ -1,7 +1,9 @@
 build:
+	# systemctl start docker
 	docker-compose build
 
 up:
+	alacritty
 	docker-compose up -d
 
 buildup: build up
