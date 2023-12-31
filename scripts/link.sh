@@ -1,1 +1,0 @@
-ln -s $HOME/dotfiles/alacritty/alacritty.yml $HOME/.alacritty.yml

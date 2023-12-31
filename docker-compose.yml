@@ -7,7 +7,6 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - ./dotfiles:/root/dotfiles
       - ./:/workspace
-    working_dir: /workspace
-    command: tail -f /dev/null
+    tty: true
+    command: /bin/bash -c "/workspace/scripts/make_symlink.sh && zsh"
