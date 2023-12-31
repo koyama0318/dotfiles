@@ -10,7 +10,6 @@ up:
 
 start: up
 	docker exec -it my-vim-container zsh
-	zsh ./scripts/make_symlink.sh
 
 restart: build start
 
