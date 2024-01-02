@@ -9,12 +9,15 @@ vim.api.nvim_set_keymap('n', '<leader>wsp', ':sp<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>wvsp', ':vsp<CR>', { noremap = true })
 
 -- buffer
-vim.api.nvim_set_keymap('n', '<leader>bn', 'bnext<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>bp', 'bprev<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>bf', 'bfirst<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>bl', 'blast<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>bn', ':bnext<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>bp', ':bprev<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>bf', ':bfirst<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>bl', ':blast<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Leader>bd', ':bdelete<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>bu', ':bunload<CR>', { noremap = true, silent = true })
+
+-- tree
+vim.api.nvim_set_keymap('n', '<Leader>t', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
 
 -- telescope
 local builtin = require('telescope.builtin')
@@ -29,9 +32,15 @@ vim.keymap.set("n", "<leader>gs", builtin.git_status, {})
 vim.keymap.set("n", "<leader>gl", builtin.git_commits, {})
 
 -- lsp
+vim.keymap.set("n", "<leader>gf", vim.diagnostic.open_float, {silent = true, noremap = true})
 vim.keymap.set("n", "<leader>dj", "<cmd>Lspsaga diagnostic_jump_next<cr>", {silent = true, noremap = true})
 vim.keymap.set("n", "<leader>dk", "<cmd>Lspsaga diagnostic_jump_prev<cr>", {silent = true, noremap = true})
 
+vim.keymap.set('n', '<leader>gh', vim.lsp.buf.hover, {silent = true, noremap = true})
+vim.keymap.set('n', '<leader>gd', vim.lsp.buf.definition, {silent = true, noremap = true})
+vim.keymap.set('n', '<leader>gi', vim.lsp.buf.implementation, {silent = true, noremap = true})
+vim.keymap.set('n', '<leader>gr', vim.lsp.buf.references, {silent = true, noremap = true})
+-- vim.keymap.set('n', '<leader>f', vim.lsp.buf.formatting, {silent = true, noremap = true})
 
 -- https://alpacat.com/blog/nvim-lspconfig-key-mappings/
 
@@ -77,7 +86,7 @@ vim.keymap.set("n", "<leader>dk", "<cmd>Lspsaga diagnostic_jump_prev<cr>", {sile
 
 
 --- In lsp attach function
-local map = vim.api.nvim_buf_set_keymap
+-- local map = vim.api.nvim_buf_set_keymap
 -- map(0, "n", "gr", "<cmd>Lspsaga rename<cr>", {silent = true, noremap = true})
 -- map(0, "n", "gx", "<cmd>Lspsaga code_action<cr>", {silent = true, noremap = true})
 -- map(0, "x", "gx", ":<c-u>Lspsaga range_code_action<cr>", {silent = true, noremap = true})

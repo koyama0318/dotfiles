@@ -10,8 +10,11 @@ sudo dnf install -y alacritty
 sudo dnf copr enable atim/starship
 sudo dnf install -y starship
 
-# use in packer
-sudo dnf install python
+
+sudo dnf install go
+sudo dnf install python # use in packer
+node -v
+
 # nvim Packer
 git clone https://github.com/wbthomason/packer.nvim \
   ~/.local/share/nvim/site/pack/packer/opt/packer.nvim
