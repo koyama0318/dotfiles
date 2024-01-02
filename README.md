@@ -7,6 +7,8 @@ chsh -s /bin/zsh
 '''
 sudo dnf install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 sudo dnf install -y alacritty
+sudo dnf copr enable atim/starship
+sudo dnf install -y starship
 
 # use in packer
 sudo dnf install python
@@ -29,6 +31,8 @@ sudo dnf install -y neofetch
 
 	chmod -R u+rX ~/.config/nvim
 
+ peco ripgrep bat
+curl
 
 ## 参考
 
