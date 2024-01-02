@@ -2,6 +2,36 @@
 vim.api.nvim_set_keymap('', '<Space>', '<Nop>', { noremap = true, silent = true })
 vim.g.mapleader = ' '
 
+-- window
+vim.api.nvim_set_keymap('n', '<leader>wk', '<C-w>h', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>wj', '<C-w>l', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>wsp', ':sp<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>wvsp', ':vsp<CR>', { noremap = true })
+
+-- buffer
+vim.api.nvim_set_keymap('n', '<leader>bn', 'bnext<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>bp', 'bprev<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>bf', 'bfirst<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>bl', 'blast<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>bd', ':bdelete<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>bu', ':bunload<CR>', { noremap = true, silent = true })
+
+-- telescope
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+vim.keymap.set("n", "<leader>fo", builtin.oldfiles, {})
+
+-- git
+vim.keymap.set("n", "<leader>gs", builtin.git_status, {})
+vim.keymap.set("n", "<leader>gl", builtin.git_commits, {})
+
+-- lsp
+vim.keymap.set("n", "<leader>dj", "<cmd>Lspsaga diagnostic_jump_next<cr>", {silent = true, noremap = true})
+vim.keymap.set("n", "<leader>dk", "<cmd>Lspsaga diagnostic_jump_prev<cr>", {silent = true, noremap = true})
+
 
 -- https://alpacat.com/blog/nvim-lspconfig-key-mappings/
 
@@ -43,25 +73,11 @@ vim.g.mapleader = ' '
 --   end,
 -- })
 
--- telescope
--- local builtin = require('telescope.builtin')
--- vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
--- vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
--- vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
--- vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
--- -- gitの操作（git status）
--- vim.keymap.set("n", "<leader>gs", builtin.git_status, {})
 
--- -- gitの操作（git log）
--- vim.keymap.set("n", "<leader>gl", builtin.git_commits, {})
--- 履歴の操作
--- vim.keymap.set("n", "<leader>fo", builtin.oldfiles, {})
--- file browser
--- vim.keymap.set("n", "<space>fB", ":Telescope file_browser", { noremap = true })
 
 --- In lsp attach function
--- local map = vim.api.nvim_buf_set_keymap
+local map = vim.api.nvim_buf_set_keymap
 -- map(0, "n", "gr", "<cmd>Lspsaga rename<cr>", {silent = true, noremap = true})
 -- map(0, "n", "gx", "<cmd>Lspsaga code_action<cr>", {silent = true, noremap = true})
 -- map(0, "x", "gx", ":<c-u>Lspsaga range_code_action<cr>", {silent = true, noremap = true})
@@ -69,6 +85,9 @@ vim.g.mapleader = ' '
 -- map(0, "n", "go", "<cmd>Lspsaga show_line_diagnostics<cr>", {silent = true, noremap = true})
 -- map(0, "n", "gj", "<cmd>Lspsaga diagnostic_jump_next<cr>", {silent = true, noremap = true})
 -- map(0, "n", "gk", "<cmd>Lspsaga diagnostic_jump_prev<cr>", {silent = true, noremap = true})
+
+
+
 -- map(0, "n", "<C-u>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1, '<c-u>')<cr>", {})
 -- map(0, "n", "<C-d>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1, '<c-d>')<cr>", {})
 
@@ -87,26 +106,26 @@ vim.g.mapleader = ' '
 --     ...
 --     on_attach = function(bufnr)
 --       local gs = package.loaded.gitsigns
-  
+
 --       local function map(mode, l, r, opts)
 --         opts = opts or {}
 --         opts.buffer = bufnr
 --         vim.keymap.set(mode, l, r, opts)
 --       end
-  
+
 --       -- Navigation
 --       map('n', ']c', function()
 --         if vim.wo.diff then return ']c' end
 --         vim.schedule(function() gs.next_hunk() end)
 --         return '<Ignore>'
 --       end, {expr=true})
-  
+
 --       map('n', '[c', function()
 --         if vim.wo.diff then return '[c' end
 --         vim.schedule(function() gs.prev_hunk() end)
 --         return '<Ignore>'
 --       end, {expr=true})
-  
+
 --       -- Actions
 --       map('n', '<leader>hs', gs.stage_hunk)
 --       map('n', '<leader>hr', gs.reset_hunk)
@@ -121,7 +140,7 @@ vim.g.mapleader = ' '
 --       map('n', '<leader>hd', gs.diffthis)
 --       map('n', '<leader>hD', function() gs.diffthis('~') end)
 --       map('n', '<leader>td', gs.toggle_deleted)
-  
+
 --       -- Text object
 --       map({'o', 'x'}, 'ih', ':<C-U>Gitsigns select_hunk<CR>')
 --     end
