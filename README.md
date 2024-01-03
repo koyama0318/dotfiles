@@ -9,7 +9,7 @@ sudo dnf install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 sudo dnf install -y alacritty
 sudo dnf copr enable atim/starship
 sudo dnf install -y starship
-
+sudo dnf install -y gh
 
 sudo dnf install go
 sudo dnf install python # use in packer
