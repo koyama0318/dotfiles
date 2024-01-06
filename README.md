@@ -19,9 +19,7 @@ node -v
 Hack (nerd font)
 
 # nvim Packer
-git clone https://github.com/wbthomason/packer.nvim \
-  ~/.local/share/nvim/site/pack/packer/opt/packer.nvim
-
+git clone https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/opt/packer.nvim
 '''
 
 sudo dnf install -y zsh
