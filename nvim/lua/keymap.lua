@@ -48,6 +48,7 @@ vim.keymap.set('n', '<leader>gh', vim.lsp.buf.hover, {silent = true, noremap = t
 vim.keymap.set('n', '<leader>gd', vim.lsp.buf.definition, {silent = true, noremap = true})
 vim.keymap.set('n', '<leader>gi', vim.lsp.buf.implementation, {silent = true, noremap = true})
 vim.keymap.set('n', '<leader>gr', vim.lsp.buf.references, {silent = true, noremap = true})
+
 -- vim.keymap.set('n', '<leader>f', vim.lsp.buf.formatting, {silent = true, noremap = true})
 
 -- https://alpacat.com/blog/nvim-lspconfig-key-mappings/

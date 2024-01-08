@@ -10,6 +10,7 @@ sudo dnf install -y alacritty
 sudo dnf copr enable atim/starship
 sudo dnf install -y starship
 sudo dnf install -y gh
+sudo dnf install -y tig
 
 sudo dnf install go
 sudo dnf install python # use in packer

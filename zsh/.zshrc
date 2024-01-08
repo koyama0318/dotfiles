@@ -4,4 +4,6 @@ if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
 fi
 export PATH
 
+export PATH="$PATH:$GOPATH/bin"
+
 eval "$(starship init zsh)"
