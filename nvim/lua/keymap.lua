@@ -20,8 +20,9 @@ vim.api.nvim_set_keymap('n', '<leader>bn', ':bnext<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>bp', ':bprev<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>bf', ':bfirst<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>bl', ':blast<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<Leader>bd', ':bdelete<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>bu', ':bunload<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>bdo', ':bufdo<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>bdi', ':bdelete<CR>', { noremap = true, silent = true })
 
 -- tree
 vim.api.nvim_set_keymap('n', '<Leader>tt', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
