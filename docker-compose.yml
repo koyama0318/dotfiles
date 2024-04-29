@@ -1,4 +1,4 @@
-version: "3"
+version: "3.9"
 
 services:
   vim-container:
@@ -9,4 +9,4 @@ services:
     volumes:
       - ./:/workspace
     tty: true
-    command: /bin/bash -c "/workspace/scripts/link.sh && zsh"
+    command: zsh
