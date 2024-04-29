@@ -1,5 +1,5 @@
-local augroup = vim.api.nvim_create_augroup -- Create/get autocommand group
-local autocmd = vim.api.nvim_create_autocmd -- Create autocommand
+local augroup = vim.api.nvim_create_augroup
+local autocmd = vim.api.nvim_create_autocmd
 
 -- Remove whitespace on save
 autocmd("BufWritePre", {
@@ -21,17 +21,17 @@ autocmd({ "BufReadPost" }, {
 	end,
 })
 
--- Compile 
+-- Compile
 vim.api.nvim_create_autocmd("BufWritePost", {
-    pattern = { "plugins.lua" },
-    command = "PackerCompile",
+	pattern = { "plugins.lua" },
+	command = "PackerCompile",
 })
 
 -- nvim-treesitter: avoid error "No folds found"
-vim.api.nvim_create_autocmd({'BufEnter','BufAdd','BufNew','BufNewFile','BufWinEnter'}, {
-    group = vim.api.nvim_create_augroup('TS_FOLD_WORKAROUND', {}),
-    callback = function()
-        vim.opt.foldmethod     = 'expr'
-        vim.opt.foldexpr       = 'nvim_treesitter#foldexpr()'
-    end
+vim.api.nvim_create_autocmd({ 'BufEnter', 'BufAdd', 'BufNew', 'BufNewFile', 'BufWinEnter' }, {
+	group = vim.api.nvim_create_augroup('TS_FOLD_WORKAROUND', {}),
+	callback = function()
+		vim.opt.foldmethod = 'expr'
+		vim.opt.foldexpr   = 'nvim_treesitter#foldexpr()'
+	end
 })

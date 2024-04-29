@@ -39,11 +39,8 @@ vim.api.nvim_set_option('hlsearch', true)
 vim.api.nvim_set_option('clipboard', 'unnamedplus')
 
 -- 背景を透明に設定
-vim.cmd[[hi Normal guibg=NONE ctermbg=NONE]]
-vim.cmd[[hi NonText guibg=NONE ctermbg=NONE]]
+vim.cmd [[hi Normal guibg=NONE ctermbg=NONE]]
+vim.cmd [[hi NonText guibg=NONE ctermbg=NONE]]
 
 -- TrueColor サポートを有効化
 vim.o.termguicolors = true
-
--- tabline settings
--- vim.api.nvim_add_option('sessionoptions', 'tabpages')

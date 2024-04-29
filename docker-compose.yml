@@ -1,12 +1,12 @@
-version: '3'
+version: "3"
 
 services:
   vim-container:
-    container_name: my-vim-container
+    container_name: vim-container
     build:
       context: .
       dockerfile: Dockerfile
     volumes:
       - ./:/workspace
     tty: true
-    command: /bin/bash -c "/workspace/scripts/make_symlink.sh && zsh"
+    command: /bin/bash -c "/workspace/scripts/link.sh && zsh"

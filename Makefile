@@ -9,7 +9,7 @@ up:
 	docker-compose up -d
 
 start: up
-	docker exec -it my-vim-container zsh
+	docker exec -it vim-container zsh
 
 restart: build start
 

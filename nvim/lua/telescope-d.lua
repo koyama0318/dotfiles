@@ -1,4 +1,4 @@
-require('telescope').setup{
+require('telescope').setup {
     defaults = {
         file_ignore_patterns = {
             "^.git/",
@@ -29,18 +29,12 @@ require('telescope').setup{
             hijack_netrw = true,
             mappings = {
                 ["i"] = {
-                     -- your custom insert mode mappings
+                    -- your custom insert mode mappings
                 },
                 ["n"] = {
-                     -- your custom insert mode mappings
+                    -- your custom insert mode mappings
                 },
             },
         },
     }
 }
-
--- Optional dependencies
--- sharkdp/fd (finder)
--- nvim-treesitter/nvim-treesitter (finder/preview)
--- neovim LSP (picker)
--- devicons (icons)

@@ -15,4 +15,3 @@ require('mini-indentscope-d')
 require('nvim-treesitter-d')
 require('notice-d')
 require('gitsigns-d')
-

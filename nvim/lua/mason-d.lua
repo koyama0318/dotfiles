@@ -1,11 +1,11 @@
 require("mason").setup({
 	ui = {
-	  icons = {
-		package_installed = "✓",
-		package_pending = "➜",
-		package_uninstalled = "✗"
-	  },
-	  border = 'single'
+		icons = {
+			package_installed = "✓",
+			package_pending = "➜",
+			package_uninstalled = "✗"
+		},
+		border = 'single'
 	}
 })
 

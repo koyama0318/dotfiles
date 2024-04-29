@@ -46,8 +46,9 @@ return require('packer').startup(function(use)
   })
 
   use({
-    'nvim-telescope/telescope.nvim', tag = '0.1.5',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.5',
+    requires = { { 'nvim-lua/plenary.nvim' } }
   })
 
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
@@ -55,11 +56,11 @@ return require('packer').startup(function(use)
   use {
     "nvim-telescope/telescope-file-browser.nvim",
     requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
-}
+  }
 
-  use{ 'kkharji/lspsaga.nvim' }
+  use { 'kkharji/lspsaga.nvim' }
 
-  use {'stevearc/dressing.nvim'}
+  use { 'stevearc/dressing.nvim' }
 
   use {
     'nvim-lualine/lualine.nvim',
@@ -68,19 +69,18 @@ return require('packer').startup(function(use)
 
   use {
     'kdheepak/tabline.nvim',
-    requires = { { 'hoob3rt/lualine.nvim', opt=true }, {'kyazdani42/nvim-web-devicons', opt = true} }
+    requires = { { 'hoob3rt/lualine.nvim', opt = true }, { 'kyazdani42/nvim-web-devicons', opt = true } }
   }
 
-  use{"echasnovski/mini.indentscope"}
+  use { "echasnovski/mini.indentscope" }
 
   use({
     "folke/noice.nvim",
     requires = {
       "MunifTanjim/nui.nvim",
       "rcarriga/nvim-notify",
-      }
+    }
   })
 
   use { "lewis6991/gitsigns.nvim" }
-
 end)
