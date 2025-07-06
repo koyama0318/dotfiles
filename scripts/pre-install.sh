@@ -17,6 +17,10 @@ fi
 # rio
 brew install --cask rio
 
+# Hack Nerd Font
+echo "Installing Hack Nerd Font..."
+brew install --cask font-hack-nerd-font
+
 # zsh
 if ! command -v zsh &> /dev/null; then
     echo "Installing zsh..."
@@ -29,6 +33,7 @@ if [[ ! -f "${ZINIT_HOME}/bin/zinit.zsh" ]]; then
     echo "Installing zinit..."
     mkdir -p "$(dirname $ZINIT_HOME)"
     git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+    source ~/.zshrc
 fi
 
 echo "✅ Pre-install script completed!\n"

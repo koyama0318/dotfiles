@@ -9,8 +9,9 @@ echo "🔗 Linking zsh config..."
 ln -sf ~/dotfiles/zsh/.zshrc ~/.zshrc
 
 echo "🔗 Linking rio config..."
-ln -sf ~/dotfiles/rio/config.toml ~/.config/rio/config.toml
+mkdir -p ~/.config/rio/themes
 ln -sf ~/dotfiles/rio/themes/blight_lights.toml ~/.config/rio/themes/blight_lights.toml
+ln -sf ~/dotfiles/rio/config.toml ~/.config/rio/config.toml
 
 echo "🔗 Linking git config..."
 ln -sf ~/dotfiles/git/.gitconfig ~/.gitconfig
