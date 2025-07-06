@@ -1,88 +1,46 @@
-"$schema" = 'https://starship.rs/config-schema.json'
-
+# Starship configuration
 format = """
-$directory\
-$git_branch\
-${custom.git_unpushed_commits}\
-${custom.git_staged_files}\
-${custom.git_staged_added_lines}\
-${custom.git_staged_deleted_lines}\
-$docker_context\
-$fill\
-$time
-$character"""
-
-add_newline = true
+$all$character"""
 
 [character]
-success_symbol = '[](fg:#FB8C77)'
-error_symbol = '[](fg:#BE5846)'
-
-[fill]
-symbol = ' '
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
 
 [directory]
-format = "[  $path ](fg:#6B9971)"
-truncation_length = 100
-truncate_to_repo = false
+truncation_length = 3
 truncation_symbol = "…/"
 
+[cmd_duration]
+min_time = 100
+format = "⏱ [$duration]($style) "
+
 [git_branch]
-symbol = "\ueb00"
-style = "fg:#97AF82"
-format = '[ $symbol $branch ]($style)'
+symbol = "🌱 "
 
-[git_commit]
-disabled = false
+[git_status]
+conflicted = "🏳"
+ahead = "🏎💨"
+behind = "😰"
+diverged = "😵"
+up_to_date = "✓"
+untracked = "🤷"
+stashed = "📦"
+modified = "📝"
+staged = '[++\($count\)](green)'
+renamed = "👅"
+deleted = "🗑"
 
-# [git_status]
-# staged = ' ${count} '
-# deleted = ' ${count} '
-# modified = '󱇨 ${count} '
-# conflicted = '[󰘕 ${count} ](red)'
-# untracked = '[? ${count} ](red)'
-# style = "bg:#394260"
-# format = '[${staged}${deleted}${modified}${conflicted}${untracked}](fg:#769ff0 bg:#394260)'
+[nodejs]
+symbol = "⬢ "
+format = "[$symbol($version )]($style)"
+
+[python]
+symbol = "🐍 "
+format = "[$symbol$version]($style)"
 
 [docker_context]
-symbol = "󰡨"
-style = "fg:#99D1C8"
-format = '[ $symbol $context ]($style)'
+symbol = "🐳 "
+format = "[$symbol$context]($style) "
 
-[time]
-disabled = false
-time_format = "%R" # Hour:Minute Format
-style = "fg:#a0a9cb"
-format = '[  $time ]($style)'
-
-[custom.git_unpushed_commits]
-command = "git rev-list --count @{u}.."
-description = "The number of commits that are not yet pushed to upstream"
-when = "test $(git rev-parse --is-inside-work-tree 2>/dev/null) = 'true'"
-symbol = ""
-style = "fg:#C1C499"
-format ="[ $symbol( $output )]($style)"
-
-[custom.git_staged_files]
-command = "git diff --cached --name-only | wc -l"
-description = "The number of files staged for commit"
-when = "test $(git rev-parse --is-inside-work-tree 2>/dev/null) = 'true'"
-symbol = ""
-style = "fg:#C1C499"
-format ="[$symbol( $output )]($style)"
-
-[custom.git_staged_added_lines]
-command = "git diff --cached --numstat | awk '{ add += $1 } END { print add }'"
-description = "The number of lines added and staged for commit"
-when = "test $(git rev-parse --is-inside-work-tree 2>/dev/null) = 'true'"
-symbol = ""
-style = "fg:#C1C499"
-format ="[$symbol( $output )]($style)"
-
-[custom.git_staged_deleted_lines]
-command = "git diff --cached --numstat | awk '{ del += $2 } END { print del }'"
-description = "The number of lines deleted and staged for commit"
-when = "test $(git rev-parse --is-inside-work-tree 2>/dev/null) = 'true'"
-symbol = ""
-style = "fg:#C1C499"
-format ="[$symbol( $output )]($style)"
+[aws]
+disabled = true

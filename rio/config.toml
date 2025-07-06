@@ -1,0 +1,23 @@
+theme = "blight_lights"
+padding-x = 12
+padding-y = [0, 0]
+line-height = 1.2
+
+[cursor]
+shape = 'beam'
+blinking = true
+blinking-interval = 400
+
+[window]
+mode = "Maximized"
+opacity = 0.95
+blur = false
+decorations = "Transparent"
+
+[fonts]
+size = 13
+
+[navigation]
+mode = "bookmark"
+clickable = true
+hide-if-single = true

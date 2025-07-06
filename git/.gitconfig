@@ -1,0 +1,47 @@
+[core]
+    repositoryformatversion = 0
+    filemode = true
+    bare = false
+    logallrefupdates = true
+    ignorecase = true
+    precomposeunicode = true
+    autocrlf = input
+
+[user]
+    name = koyama0318 
+    email = katoko.318@gmail.com
+
+[color]
+    ui = auto
+    diff = auto
+    status = auto
+    branch = auto
+
+[alias]
+    st = status
+    ci = commit
+    co = checkout
+    br = branch
+    lg = log --oneline --graph --all --decorate
+
+[merge]
+    tool = vimdiff
+    conflictstyle = diff3
+
+[mergetool "vimdiff"]
+    cmd = vim -d \"$LOCAL\" \"$REMOTE\" \"$MERGED\" -c \"wincmd l\"
+
+[diff]
+    tool = vimdiff
+
+[credential]
+    helper = store
+
+[push]
+    default = simple
+
+[fetch]
+    prune = true
+
+[rebase]
+    autosquash = true

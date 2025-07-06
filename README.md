@@ -1,66 +1,48 @@
+# dotfiles-dev-container-template
 
-## pre-install
+## 📦 スタック
 
-make
-chsh -s /bin/zsh
+### シェル・開発ユーティリティ
+- `zsh`（シェル）
+- `zinit`（Zshプラグインマネージャ）
+- `starship`（高速・モダンなプロンプト）
+- `asdf`（ランタイムバージョン管理）
+- `just`（タスクランナー）
 
-'''
-sudo dnf install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
-sudo dnf install -y alacritty
-sudo dnf copr enable atim/starship
-sudo dnf install -y starship
-sudo dnf install -y gh
-sudo dnf install -y tig
+### バージョン管理
+- `git`
+- `lazygit`（TUI Gitクライアント）
 
-sudo dnf install go
-sudo dnf install python # use in packer
-node -v
+### AIアシスタント
+- `claude-cli`（Anthropic ClaudeへのCLIアクセス）
 
-## font
-Hack (nerd font)
+### エディタ（Neovim + Lua）
+- `neovim`（Lua構成、プラグイン管理は `lazy.nvim`）
+- プラグイン一覧：
+  - UI:
+    - `lualine.nvim`
+    - `nvim-tree.lua`
+    - `nvim-web-devicons`
+    - `bufferline.nvim`
+  - Git:
+    - `gitsigns.nvim`
+    - `fugitive.vim`
+    - `lazygit.nvim`
+  - 補完・LSP:
+    - `nvim-lspconfig`
+    - `nvim-cmp`
+    - `cmp-nvim-lsp`, `cmp-buffer`, `cmp-path`
+    - `LuaSnip`, `friendly-snippets`
+  - ユーティリティ:
+    - `telescope.nvim`, `plenary.nvim`
+    - `comment.nvim`
+    - `which-key.nvim`
+    - `auto-pairs`
+    - `nvim-ts-autotag`
 
-# nvim Packer
-git clone https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/opt/packer.nvim
-'''
+## 📥 インストール方法
 
-sudo dnf install -y zsh
-sudo dnf install -y neovim
-sudo dnf install -y neofetch
-
-
-	chmod +x ./scripts/make_symlink.sh
-	zsh ./scripts/make_symlink.sh
-
-
-
-
-	chmod -R u+rX ~/.config/nvim
-
- peco ripgrep bat
-curl
-
-## 参考
-
-https://zenn.dev/yano/articles/neovim_frontend_development_2022
-
-
-## TODO
-
-[ ] nvim https://zenn.dev/yano/articles/neovim_frontend_development_2022
-	[]gruvbox-material
-	[]nvim-treesitter
-	[]mason.nvim
-		[]mason-lsconfig.nvim
-		[]null-ls.nvim
-		[]mason-null-ls.nvim
-	[]nvim-cmp
-		[] lspkind-nvim
-	[]telescope.nvim
-	[]lspsaga.nvim
-	[]dressing.nvim
-
-
-[ ] zsh
-	[]alias
-	[]git branch
-[ ] fzf
+```sh
+sh scripts/pre-install.sh
+just
+```
