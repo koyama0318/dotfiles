@@ -1,0 +1,33 @@
+# Theme
+skyliss.lotus-theme
+
+# Editor
+vscodevim.vim
+
+# Version Control / Git
+donjayamanne.githistory
+eamodio.gitlens
+github.vscode-pull-request-github
+
+# Linting / Formatting
+biomejs.biome
+DavidAnson.vscode-markdownlint
+esbenp.prettier-vscode
+
+# Language support
+golang.go
+oven.bun-vscode
+rust-lang.rust-analyzer
+
+# YAML / Config
+redhat.vscode-yaml
+
+# Containers / Remote
+docker.docker
+ms-vscode-remote.remote-containers
+
+# Collaboration
+ms-vsliveshare.vsliveshare
+
+# API / Docs
+arjun.swagger-viewer

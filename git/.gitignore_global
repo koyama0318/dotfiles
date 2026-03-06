@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor / IDE
+*.swp
+*.swo
+*~
+.idea/
+*.sublime-*
+
+# Thumbnails
+Thumbs.db
+ehthumbs.db
+
+# Temporary
+*.log
+*.tmp
+*.temp
+.cache/
+.temp/

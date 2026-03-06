@@ -1,48 +1,56 @@
-# dotfiles-dev-container-template
+# dotfiles
 
-## 📦 スタック
+macOS の開発環境設定をまとめたリポジトリ。
 
-### シェル・開発ユーティリティ
-- `zsh`（シェル）
-- `zinit`（Zshプラグインマネージャ）
-- `starship`（高速・モダンなプロンプト）
-- `asdf`（ランタイムバージョン管理）
-- `just`（タスクランナー）
+## スタック
+
+### シェル
+- `zsh` — シェル
+- `zinit` — Zsh プラグインマネージャ
+
+### ターミナル
+- `Ghostty` — メインターミナル
+- `Warp` — サブターミナル
+- `starship` — プロンプト
 
 ### バージョン管理
 - `git`
-- `lazygit`（TUI Gitクライアント）
+- `asdf` — ランタイムバージョン管理
 
-### AIアシスタント
-- `claude-cli`（Anthropic ClaudeへのCLIアクセス）
+### エディタ
+- `Zed` — メインIDE
+- `VS Code` — サブIDE
+- `vim` — 軽量編集用
 
-### エディタ（Neovim + Lua）
-- `neovim`（Lua構成、プラグイン管理は `lazy.nvim`）
-- プラグイン一覧：
-  - UI:
-    - `lualine.nvim`
-    - `nvim-tree.lua`
-    - `nvim-web-devicons`
-    - `bufferline.nvim`
-  - Git:
-    - `gitsigns.nvim`
-    - `fugitive.vim`
-    - `lazygit.nvim`
-  - 補完・LSP:
-    - `nvim-lspconfig`
-    - `nvim-cmp`
-    - `cmp-nvim-lsp`, `cmp-buffer`, `cmp-path`
-    - `LuaSnip`, `friendly-snippets`
-  - ユーティリティ:
-    - `telescope.nvim`, `plenary.nvim`
-    - `comment.nvim`
-    - `which-key.nvim`
-    - `auto-pairs`
-    - `nvim-ts-autotag`
+### ユーティリティ
+- `just` — タスクランナー
+- `tmux` — ターミナルマルチプレクサ
 
-## 📥 インストール方法
+## セットアップ
 
 ```sh
 sh scripts/pre-install.sh
 just
 ```
+
+## リセット（シンボリックリンクの削除）
+
+```sh
+just reset
+```
+
+## ディレクトリ構成
+
+| ディレクトリ | 内容 |
+|---|---|
+| `asdf/` | asdf の設定・バージョン管理 |
+| `claude/` | Claude Code の設定 |
+| `ghostty/` | Ghostty の設定 |
+| `git/` | git の設定・グローバル gitignore |
+| `scripts/` | セットアップスクリプト群 |
+| `starship/` | starship プロンプト設定 |
+| `vim/` | vim 設定 |
+| `vscode/` | VS Code 設定・拡張機能リスト |
+| `warp/` | Warp に関するメモ |
+| `zed/` | Zed の設定 |
+| `zsh/` | zsh 設定 |

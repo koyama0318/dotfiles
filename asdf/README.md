@@ -1,10 +1,22 @@
 # asdf
 
-## プラグインの検索
+ランタイムバージョン管理ツール [asdf](https://asdf-vm.com/) の設定。
+
+## ファイル
+
+| ファイル | リンク先 | 内容 |
+|---|---|---|
+| `.tool-versions` | `~/.tool-versions` | グローバルのバージョン定義 |
+| `.asdfrc` | `~/.asdfrc` | asdf の設定 |
+
+## プラグイン検索
 
 ```sh
-asdf plugin list all | grep nodejs # asdf 管理下チェック
-asdf list all nodejs # バージョン一覧
+# asdf 管理下チェック
+asdf plugin list all | grep nodejs
+
+# バージョン一覧
+asdf list all nodejs
 ```
 
 ## プラグインのインストール
@@ -14,24 +26,21 @@ asdf plugin add nodejs
 asdf install nodejs latest
 ```
 
-## インストール済みのプラグイン
+## インストール済み確認
 
 ```sh
 asdf plugin list
 asdf list
 ```
 
-## 反映 (グローバル)
+## バージョン反映
 
 ```sh
+# グローバル
 asdf set -u nodejs 24.3.0
-```
 
-## 反映 (ローカル)
-
-```sh
+# ローカル（.tool-versions に書き込み）
 asdf set nodejs 20.11.1
-> .tool-versions
 ```
 
 ## プラグインの更新

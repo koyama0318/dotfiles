@@ -1,6 +1,14 @@
 # Starship configuration
 format = """
-$all$character"""
+$directory$git_branch$git_status$time
+$character"""
+
+right_format = """$custom"""
+
+[time]
+disabled = false
+format = "[at ](dimmed)[$time]()"
+time_format = "%H:%M:%S"
 
 [character]
 success_symbol = "[❯](bold green)"
@@ -8,35 +16,32 @@ error_symbol = "[❯](bold red)"
 
 [directory]
 truncation_length = 3
-truncation_symbol = "…/"
-
-[cmd_duration]
-min_time = 100
-format = "⏱ [$duration]($style) "
+truncation_symbol = "~/"
+format = "[$path]($style) "
 
 [git_branch]
-symbol = "🌱 "
+symbol = ""
+format = "[on](dimmed) [$branch]($style)"
 
 [git_status]
-conflicted = "🏳"
-ahead = "🏎💨"
-behind = "😰"
-diverged = "😵"
-up_to_date = "✓"
-untracked = "🤷"
-stashed = "📦"
-modified = "📝"
-staged = '[++\($count\)](green)'
-renamed = "👅"
-deleted = "🗑"
+format = "[ with](dimmed)[$staged$modified]($style) "
+staged = "[ S$count](green)"
+modified = "[ C$count](yellow)"
+deleted = ""
+renamed = ""
+untracked = ""
+conflicted = ""
+ahead = ""
+behind = ""
+diverged = ""
+stashed = ""
+up_to_date = ""
 
-[nodejs]
-symbol = "⬢ "
-format = "[$symbol($version )]($style)"
-
-[python]
-symbol = "🐍 "
-format = "[$symbol$version]($style)"
+[custom.prev_branch]
+command = "git rev-parse --abbrev-ref @{-1} 2>/dev/null"
+when = "git rev-parse --is-inside-work-tree 2>/dev/null && git rev-parse @{-1} >/dev/null 2>&1"
+format = "[prev: $output]($style)"
+style = "dimmed"
 
 [docker_context]
 symbol = "🐳 "

@@ -7,3 +7,6 @@ install:
 
 setup:
     zsh ./scripts/setup.sh
+
+reset:
+    zsh ./scripts/reset.sh

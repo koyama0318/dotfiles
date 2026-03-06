@@ -1,14 +1,15 @@
 # 設定
 export ZINIT_HOME="${ZDOTDIR:-$HOME}/.zinit"
-source "${ZINIT_HOME}/bin/zinit.zsh"
+if [[ -f "${ZINIT_HOME}/zinit.zsh" ]]; then
+  source "${ZINIT_HOME}/zinit.zsh"
 
-# プラグイン群
-zinit light zsh-users/zsh-autosuggestions
-zinit light zsh-users/zsh-syntax-highlighting
-zinit light Aloxaf/fzf-tab
-zinit light djui/alias-tips
-zinit light zsh-users/zsh-completions
-zinit light rupa/z
+  # プラグイン群
+  zinit light zsh-users/zsh-autosuggestions
+  zinit light zsh-users/zsh-syntax-highlighting
+  zinit light Aloxaf/fzf-tab
+  zinit light djui/alias-tips
+  zinit light zsh-users/zsh-completions
+fi
 
 # starship prompt
 eval "$(starship init zsh)"
@@ -35,10 +36,8 @@ fi
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 # エイリアス
-alias dtf='nvim ~/dotfiles'
+alias dtf='zed ~/dotfiles'
 
-alias lg='lazygit'
 alias cc='clear'
-alias nv="nvim ."
 alias cl="claude"
 alias els="eza -T -L 3 -a -I 'node_modules|.git|.cache' --icons"

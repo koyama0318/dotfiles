@@ -1,0 +1,118 @@
+{
+  // Editor (general)
+  "editor.acceptSuggestionOnEnter": "smart",
+  "editor.accessibilitySupport": "off",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.biome": "explicit"
+  },
+  "editor.cursorBlinking": "phase",
+  "editor.cursorSmoothCaretAnimation": "explicit",
+  "editor.defaultFormatter": "biomejs.biome",
+  "editor.detectIndentation": true,
+  "editor.experimental.asyncTokenization": true,
+  "editor.fontFamily": "Hack nerd font, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 11.5,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.guides.bracketPairs": true,
+  "editor.indentSize": "tabSize",
+  "editor.inlineSuggest.enabled": true,
+  "editor.insertSpaces": true,
+  "editor.letterSpacing": 0.75,
+  "editor.lineHeight": 1.65,
+  "editor.minimap.enabled": false,
+  "editor.minimap.renderCharacters": false,
+  "editor.renderWhitespace": "trailing",
+  "editor.smoothScrolling": false,
+  "editor.snippetSuggestions": "top",
+  "editor.suggestSelection": "first",
+  "editor.wordBasedSuggestions": "currentDocument",
+  // Diff
+  "diffEditor.experimental.showMoves": true,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "diffEditor.renderSideBySide": true,
+  // Workbench
+  "workbench.activityBar.location": "top",
+  "workbench.colorTheme": "Lotus Dark",
+  "workbench.editor.enablePreview": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.layoutControl.enabled": false,
+  "workbench.navigationControl.enabled": false,
+  "workbench.statusBar.visible": false,
+  "workbench.tree.indent": 8,
+  // Window
+  "window.commandCenter": true,
+  "window.zoomLevel": -0.4,
+  // Files & Explorer
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmPasteNative": false,
+  "explorer.sortOrder": "foldersNestsFiles",
+  "extensions.ignoreRecommendations": true,
+  "files.associations": {
+    "*.mjs": "javascript"
+  },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/": true,
+    "**/node_modules/**": true,
+    "**/tmp/**": true,
+    "/.cache/": true,
+    "/.next/": true
+  },
+  "search.exclude": {
+    "**/coverage": true,
+    "**/dist": true,
+    "**/node_modules": true
+  },
+  // Language-specific formatters
+  "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome",
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "biomejs.biome",
+    "editor.formatOnSave": true
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.formatOnSave": true,
+    "editor.inlayHints.enabled": "off"
+  },
+  "[sql]": {
+    "editor.defaultFormatter": "ReneSaarsoo.sql-formatter-vsc"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome",
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome",
+    "editor.formatOnSave": true
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  // Extensions
+  "bun.debugTerminal.enabled": true,
+  "bun.debugTerminal.stopOnEntry": false,
+  "bun.runtime": "~/.bun/bin/bun",
+  "bun.test.filePattern": "**/*{.test.,.spec.,_test_,_spec_}{js,ts,tsx,jsx,mts,cts}",
+  "cursor.composer.shouldChimeAfterChatFinishes": true,
+  "cursor.cpp.enablePartialAccepts": true,
+  "cursor.general.gitGraphIndexing": "enabled",
+  "githubPullRequests.pullBranch": "never",
+  "material-icon-theme.folders.theme": "specific",
+  "redhat.telemetry.enabled": false,
+  "rust-analyzer.procMacro.enable": true,
+  "typescript.disableAutomaticTypeAcquisition": true,
+  "typescript.tsserver.experimental.enableProjectDiagnostics": false,
+  "typescript.tsserver.log": "off",
+  "typescript.updateImportsOnFileMove.enabled": "always"
+}
