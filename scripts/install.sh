@@ -62,15 +62,6 @@ if ! brew list --cask warp &> /dev/null; then
     brew install --cask warp
 fi
 
-# Zed
-ZED_APP="/Applications/Zed.app"
-if ! brew list --cask zed &> /dev/null && [[ ! -d "$ZED_APP" ]]; then
-    echo "Installing Zed..."
-    brew install --cask zed
-elif [[ -d "$ZED_APP" ]] && ! brew list --cask zed &> /dev/null; then
-    echo "Zed is already installed at $ZED_APP (skipping brew install)"
-fi
-
 # VS Code
 VSCODE_APP="/Applications/Visual Studio Code.app"
 if ! brew list --cask visual-studio-code &> /dev/null && [[ ! -d "$VSCODE_APP" ]]; then
@@ -78,6 +69,12 @@ if ! brew list --cask visual-studio-code &> /dev/null && [[ ! -d "$VSCODE_APP" ]
     brew install --cask visual-studio-code
 elif [[ -d "$VSCODE_APP" ]] && ! brew list --cask visual-studio-code &> /dev/null; then
     echo "VS Code is already installed at $VSCODE_APP (skipping brew install)"
+fi
+
+# HTTPie
+if ! command -v http &> /dev/null; then
+    echo "Installing HTTPie..."
+    brew install httpie
 fi
 
 echo "✅ Install script completed!\n"

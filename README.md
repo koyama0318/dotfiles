@@ -18,8 +18,7 @@ macOS の開発環境設定をまとめたリポジトリ。
 - `asdf` — ランタイムバージョン管理
 
 ### エディタ
-- `Zed` — メインIDE
-- `VS Code` — サブIDE
+- `VS Code` — メインIDE
 - `vim` — 軽量編集用
 
 ### ユーティリティ
@@ -52,5 +51,4 @@ just reset
 | `vim/` | vim 設定 |
 | `vscode/` | VS Code 設定・拡張機能リスト |
 | `warp/` | Warp に関するメモ |
-| `zed/` | Zed の設定 |
 | `zsh/` | zsh 設定 |

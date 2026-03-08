@@ -6,9 +6,6 @@ echo "⚙️ Start setting up dotfiles..."
 
 sh ~/dotfiles/scripts/link.sh
 
-# Installing VS Code extensions
-sh ~/dotfiles/scripts/setup-vscode-extensions.sh
-
 # Installing asdf plugins and versions (requires .tool-versions to be linked above)
 sh ~/dotfiles/scripts/setup-asdf.sh
 
