@@ -8,5 +8,8 @@ install:
 setup:
     zsh ./scripts/setup.sh
 
+link:
+    zsh ./scripts/link.sh
+
 reset:
     zsh ./scripts/reset.sh

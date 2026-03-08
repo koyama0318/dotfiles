@@ -1,0 +1,26 @@
+name: main
+root: <%= @settings['dir'] || Dir.home %>
+attach: false
+
+startup_window: work
+
+windows:
+  - work:
+      layout: main-vertical
+      panes:
+        - focus: true
+        - git branch -a
+        - git status
+  - work2:
+      layout: main-vertical
+      panes:
+        - ''
+        - ''
+        - ''
+  - grid:
+      layout: tiled
+      panes:
+        - ''
+        - ''
+        - ''
+        - ''

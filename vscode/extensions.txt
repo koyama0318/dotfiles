@@ -1,8 +1,10 @@
 # Theme
 skyliss.lotus-theme
+PKief.material-icon-theme
 
 # Editor
 vscodevim.vim
+dzhavat.bracket-pair-toggler
 
 # Version Control / Git
 donjayamanne.githistory
@@ -19,15 +21,24 @@ golang.go
 oven.bun-vscode
 rust-lang.rust-analyzer
 
+# Library support
+bradlc.vscode-tailwindcss
+
 # YAML / Config
 redhat.vscode-yaml
+tamasfe.even-better-toml
 
 # Containers / Remote
-docker.docker
+ms-azuretools.vscode-docker
 ms-vscode-remote.remote-containers
+ms-azuretools.vscode-containers
 
-# Collaboration
-ms-vsliveshare.vsliveshare
+# Markdown
+yzhang.markdown-all-in-one
+DavidAnson.vscode-markdownlint
+shd101wyy.markdown-preview-enhanced
 
-# API / Docs
-arjun.swagger-viewer
+MermaidChart.vscode-mermaid-chart
+
+# Utils
+christian-kohler.path-intellisense

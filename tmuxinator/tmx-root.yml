@@ -1,0 +1,8 @@
+name: root
+root: <%= @settings['dir'] || Dir.home %>
+attach: false
+
+windows:
+  - shell:
+      panes:
+        - neofetch

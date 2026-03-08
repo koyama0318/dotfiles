@@ -35,7 +35,6 @@
   "workbench.activityBar.location": "top",
   "workbench.colorTheme": "Lotus Dark",
   "workbench.editor.enablePreview": false,
-  "workbench.iconTheme": "material-icon-theme",
   "workbench.layoutControl.enabled": false,
   "workbench.navigationControl.enabled": false,
   "workbench.statusBar.visible": false,
@@ -68,7 +67,7 @@
   // Language-specific formatters
   "[javascript]": {
     "editor.defaultFormatter": "biomejs.biome",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
   },
   "[json]": {
     "editor.defaultFormatter": "biomejs.biome",
@@ -81,12 +80,8 @@
     "editor.formatOnType": true
   },
   "[rust]": {
-    "editor.defaultFormatter": "rust-lang.rust-analyzer",
     "editor.formatOnSave": true,
     "editor.inlayHints.enabled": "off"
-  },
-  "[sql]": {
-    "editor.defaultFormatter": "ReneSaarsoo.sql-formatter-vsc"
   },
   "[typescript]": {
     "editor.defaultFormatter": "biomejs.biome",
@@ -99,20 +94,42 @@
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    },
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
   // Extensions
   "bun.debugTerminal.enabled": true,
   "bun.debugTerminal.stopOnEntry": false,
   "bun.runtime": "~/.bun/bin/bun",
   "bun.test.filePattern": "**/*{.test.,.spec.,_test_,_spec_}{js,ts,tsx,jsx,mts,cts}",
-  "cursor.composer.shouldChimeAfterChatFinishes": true,
-  "cursor.cpp.enablePartialAccepts": true,
-  "cursor.general.gitGraphIndexing": "enabled",
   "githubPullRequests.pullBranch": "never",
   "material-icon-theme.folders.theme": "specific",
   "redhat.telemetry.enabled": false,
   "rust-analyzer.procMacro.enable": true,
-  "typescript.disableAutomaticTypeAcquisition": true,
-  "typescript.tsserver.experimental.enableProjectDiagnostics": false,
-  "typescript.tsserver.log": "off",
-  "typescript.updateImportsOnFileMove.enabled": "always"
+  "chat.agent.enabled": false,
+  "chat.checkpoints.enabled": false,
+  "chat.customAgentInSubagent.enabled": false,
+  "chat.editing.confirmEditRequestRemoval": false,
+  "chat.editing.confirmEditRequestRetry": false,
+  "chat.agent.maxRequests": 0,
+  "chat.viewSessions.enabled": false,
+  "chat.extensionTools.enabled": false,
+  "chat.tools.autoExpandFailures": false,
+  "editor.bracketPairColorization.enabled": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "chat.disableAIFeatures": true
 }

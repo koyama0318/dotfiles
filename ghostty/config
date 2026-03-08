@@ -2,14 +2,14 @@
 # https://ghostty.org/docs/config
 
 theme = blight_lights
-font-size = 13
+font-size = 12
 
 window-padding-x = 12
 window-padding-y = 0
 maximize = true
 background-opacity = 0.95
 background-blur = false
-window-decoration = false
+window-decoration = true
 
 cursor-style = bar
 cursor-style-blink = true

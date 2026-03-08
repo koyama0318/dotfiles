@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:ghostty.org)",
+      "mcp__serena__list_dir",
+      "Bash(rm \"$HOME/Library/Application Support/com.mitchellh.ghostty/config\")",
+      "Bash(ln -sf ~/dotfiles/ghostty/config \"$HOME/Library/Application Support/com.mitchellh.ghostty/config\")",
+      "Read(//Users/koyama/dotfiles/$HOME/Library/Application Support/com.mitchellh.ghostty/**)",
+      "Bash(ln -sf ~/dotfiles/ghostty/themes \"$HOME/Library/Application Support/com.mitchellh.ghostty/themes\")",
+      "Read(//Users/koyama/dotfiles/$HOME/Library/Application Support/**)",
+      "Bash(sed -i '' 's|ln -sf ~/dotfiles/ghostty/config \"$HOME/Library/Application Support/com.mitchellh.ghostty/config\"|ln -sf ~/dotfiles/ghostty/config \"$HOME/Library/Application Support/com.mitchellh.ghostty/config\"\\\\nln -sf ~/dotfiles/ghostty/themes \"$HOME/Library/Application Support/com.mitchellh.ghostty/themes\"|' ~/dotfiles/scripts/setup.sh && sed -n '16,25p' ~/dotfiles/scripts/setup.sh)",
+      "Bash(ghostty +show-config 2>/dev/null | grep -E \"theme|background|window-decoration\" | head -20)",
+      "Bash(/Applications/Ghostty.app/Contents/MacOS/ghostty +show-config 2>/dev/null | grep -E \"theme|background|window-decoration\" | head -20)",
+      "Bash(wc -c ~/dotfiles/ghostty/config && xxd ~/dotfiles/ghostty/config | head)",
+      "Bash(chmod +x /Users/koyama/dotfiles/tmux/layouts/*.sh)",
+      "Bash(mkdir -p ~/.tmux)",
+      "Bash(ln -sf ~/dotfiles/tmux/layouts ~/.tmux/layouts)",
+      "Read(//Users/koyama/.tmux/**)",
+      "Bash(ls -la ~/dotfiles/help.md 2>/dev/null; find ~/dotfiles -name 'hh' 2>/dev/null; echo $PATH | tr ':' '\\\\n' | grep dotfiles)",
+      "Bash(cat ~/dotfiles/help.md && hash -r && hash | grep hh 2>/dev/null)",
+      "Bash(alias hh 2>/dev/null; type hh 2>/dev/null)",
+      "mcp__serena__search_for_pattern",
+      "Bash(ln -sf /Users/koyama/dotfiles/tmuxinator/myproject.yml ~/.config/tmuxinator/myproject.yml)"
+    ]
+  }
+}

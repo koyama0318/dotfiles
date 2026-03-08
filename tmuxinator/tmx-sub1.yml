@@ -1,0 +1,25 @@
+name: sub1
+root: <%= @settings['dir'] || Dir.home %>
+attach: false
+
+startup_window: split
+
+windows:
+  - split:
+      layout: even-horizontal
+      panes:
+        - ''
+        - ''
+  - work:
+      layout: main-vertical
+      panes:
+        - ''
+        - ''
+        - ''
+  - grid:
+      layout: tiled
+      panes:
+        - ''
+        - ''
+        - ''
+        - ''
