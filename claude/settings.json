@@ -1,1 +1,123 @@
-{}
+{
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
+    "DISABLE_TELEMETRY": "1",
+    "DISABLE_ERROR_REPORTING": "1",
+    "CLAUDE_CODE_DISABLE_ADAPTIVE_THINKING": "1",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "CLAUDE_CODE_NO_FLICKER": "1"
+  },
+  "permissions": {
+    "allow": [
+      "Read(*)",
+      "Write(*)",
+      "Edit(*)",
+      "MultiEdit(*)",
+      "NotebookEdit(*)",
+      "TodoWrite",
+      "Bash(git *)",
+      "Bash(npm *)",
+      "Bash(pnpm *)",
+      "Bash(node *)",
+      "Bash(pytest *)",
+      "Bash(ls *)",
+      "Bash(cat *)",
+      "WebFetch(*)",
+      "WebSearch(*)"
+    ],
+    "deny": [
+      "Bash(rm -rf *)",
+      "Bash(sudo rm *)",
+      "Bash(sudo chmod *)",
+      "Bash(sudo chown *)",
+      "Bash(chmod 777 *)",
+      "Bash(chmod -R 777 *)",
+      "Bash(dd if=*)",
+      "Bash(mkfs *)",
+      "Bash(fdisk *)",
+      "Bash(parted *)",
+      "Bash(shred *)",
+      "Bash(sudo su *)",
+      "Bash(sudo -i *)",
+      "Bash(passwd *)",
+      "Bash(visudo *)",
+      "Bash(crontab -r *)",
+      "Bash(iptables *)",
+      "Bash(ufw *)",
+      "Bash(systemctl disable *)",
+      "Bash(systemctl stop *)",
+      "Bash(pkill *)",
+      "Bash(kill -9 1)",
+      "Bash(history -c *)",
+      "Bash(export AWS_*)",
+      "Bash(curl * | bash *)",
+      "Bash(wget * | bash *)",
+      "Bash(curl * | sh *)",
+      "Bash(wget * | sh *)",
+      "Bash(base64 -d * | bash *)",
+      "Bash(eval *)",
+      "Bash(git push --force *)",
+      "Bash(git push -f *)",
+      "Bash(git reset --hard *)",
+      "Bash(npm publish *)",
+      "Bash(pnpm publish *)",
+      "Bash(yarn publish *)",
+      "Bash(terraform apply *)",
+      "Bash(pip install --user *)",
+      "Bash(brew uninstall *)",
+      "Bash(sudo brew *)"
+    ],
+    "ask": [
+      "Bash(git push *)",
+      "Bash(git reset *)",
+      "Bash(sudo *)"
+    ],
+    "defaultMode": "acceptEdits"
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "bash ~/.claude/statusline-command.sh"
+  },
+  "enabledPlugins": {
+    "chrome-devtools-mcp@claude-plugins-official": true,
+    "code-review@claude-plugins-official": true,
+    "code-simplifier@claude-plugins-official": true,
+    "context7@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": true,
+    "ralph-loop@claude-plugins-official": true,
+    "rust-analyzer-lsp@claude-plugins-official": true,
+    "skill-creator@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true,
+    "uxaudit@gotalab-uxaudit": true
+  },
+  "extraKnownMarketplaces": {
+    "anthropic-agent-skills": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/skills"
+      }
+    },
+    "gotalab-uxaudit": {
+      "source": {
+        "source": "github",
+        "repo": "gotalab/uxaudit"
+      }
+    },
+    "koyama0318-marketplace": {
+      "source": {
+        "source": "directory",
+        "path": "/Users/koyama/repo/koyama0318-marketplace"
+      }
+    },
+    "ui-ux-pro-max-skill": {
+      "source": {
+        "source": "github",
+        "repo": "nextlevelbuilder/ui-ux-pro-max-skill"
+      }
+    }
+  },
+  "language": "Japanese",
+  "skipDangerousModePermissionPrompt": true,
+  "teammateMode": "tmux"
+}
