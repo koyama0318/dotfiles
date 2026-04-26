@@ -10,12 +10,10 @@ macOS の開発環境設定をまとめたリポジトリ。
 
 ### ターミナル
 - `Ghostty` — メインターミナル
-- `Warp` — サブターミナル
 - `starship` — プロンプト
 
 ### バージョン管理
 - `git`
-- `asdf` — ランタイムバージョン管理
 
 ### エディタ
 - `VS Code` — メインIDE
@@ -42,13 +40,12 @@ just reset
 
 | ディレクトリ | 内容 |
 |---|---|
-| `asdf/` | asdf の設定・バージョン管理 |
 | `claude/` | Claude Code の設定 |
 | `ghostty/` | Ghostty の設定 |
 | `git/` | git の設定・グローバル gitignore |
 | `scripts/` | セットアップスクリプト群 |
 | `starship/` | starship プロンプト設定 |
+| `tmux/` | tmux 設定・レイアウト |
 | `vim/` | vim 設定 |
 | `vscode/` | VS Code 設定・拡張機能リスト |
-| `warp/` | Warp に関するメモ |
 | `zsh/` | zsh 設定 |

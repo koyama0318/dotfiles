@@ -10,17 +10,11 @@ SYMLINKS=(
   "$HOME/.claude/settings.json"
   "$HOME/.claude/CLAUDE.md"
   "$HOME/.zshrc"
-  "$HOME/.config/ghostty/themes/blight_lights"
   "$HOME/.config/ghostty/config"
   "$HOME/.gitconfig"
-  "$HOME/.config/zed/settings.json"
-  "$HOME/.config/zed/keymap.json"
   "$HOME/.config/starship.toml"
-  "$HOME/.asdfrc"
-  "$HOME/.tool-versions"
   "$HOME/.vimrc"
   "$HOME/Library/Application Support/Code/User/settings.json"
-
 )
 
 # Remove symlink only if it exists, is a symlink, and points to this dotfiles repo.

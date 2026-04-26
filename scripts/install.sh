@@ -8,12 +8,6 @@ if ! command -v starship &> /dev/null; then
     brew install starship
 fi
 
-# asdf
-if ! command -v asdf &> /dev/null; then
-    echo "Installing asdf..."
-    brew install asdf
-fi
-
 # git
 if ! command -v git &> /dev/null; then
     echo "Installing git..."
@@ -54,12 +48,6 @@ fi
 if ! brew list --cask ghostty &> /dev/null; then
     echo "Installing Ghostty..."
     brew install --cask ghostty
-fi
-
-# Warp (terminal)
-if ! brew list --cask warp &> /dev/null; then
-    echo "Installing Warp..."
-    brew install --cask warp
 fi
 
 # VS Code

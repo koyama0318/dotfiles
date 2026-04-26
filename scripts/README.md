@@ -9,7 +9,6 @@
 | `pre-install.sh` | Homebrew 本体のインストールなど事前準備 |
 | `install.sh` | Homebrew パッケージ・cask のインストール |
 | `setup.sh` | dotfiles のシンボリックリンク作成 |
-| `setup-asdf.sh` | asdf プラグイン・バージョンのインストール |
 | `setup-vscode-extensions.sh` | VS Code 拡張機能のインストール |
 | `setup-npm-globals.sh` | npm グローバルパッケージのインストール（claude など） |
 | `reset.sh` | setup.sh で作成したシンボリックリンクの削除 |

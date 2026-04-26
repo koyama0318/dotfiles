@@ -6,8 +6,7 @@
 
 | ファイル | リンク先 | 内容 |
 |---|---|---|
-| `config` | `~/.config/ghostty/config` | メイン設定（テーマ・パディング・透明度・カーソルなど） |
-| `themes/blight_lights` | `~/.config/ghostty/themes/blight_lights` | Bright Lights カラーテーマ |
+| `config` | `~/.config/ghostty/config` | メイン設定（カラー・パディング・透明度・カーソルなど） |
 
 ## 反映
 
