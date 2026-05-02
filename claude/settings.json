@@ -1,4 +1,6 @@
 {
+  "language": "Japanese",
+  "teammateMode": "tmux",
   "env": {
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
     "DISABLE_TELEMETRY": "1",
@@ -7,7 +9,12 @@
     "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
     "CLAUDE_CODE_NO_FLICKER": "1"
   },
+  "statusLine": {
+    "type": "command",
+    "command": "bash ~/.claude/statusline-command.sh"
+  },
   "permissions": {
+    "defaultMode": "auto",
     "allow": [
       "Read(*)",
       "Write(*)",
@@ -71,12 +78,7 @@
       "Bash(git push *)",
       "Bash(git reset *)",
       "Bash(sudo *)"
-    ],
-    "defaultMode": "acceptEdits"
-  },
-  "statusLine": {
-    "type": "command",
-    "command": "bash ~/.claude/statusline-command.sh"
+    ]
   },
   "enabledPlugins": {
     "chrome-devtools-mcp@claude-plugins-official": true,
@@ -85,11 +87,8 @@
     "context7@claude-plugins-official": true,
     "frontend-design@claude-plugins-official": true,
     "ralph-loop@claude-plugins-official": true,
-    "rust-analyzer-lsp@claude-plugins-official": true,
     "skill-creator@claude-plugins-official": true,
-    "superpowers@claude-plugins-official": true,
-    "typescript-lsp@claude-plugins-official": true,
-    "uxaudit@gotalab-uxaudit": true
+    "typescript-lsp@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "anthropic-agent-skills": {
@@ -97,27 +96,6 @@
         "source": "github",
         "repo": "anthropics/skills"
       }
-    },
-    "gotalab-uxaudit": {
-      "source": {
-        "source": "github",
-        "repo": "gotalab/uxaudit"
-      }
-    },
-    "koyama0318-marketplace": {
-      "source": {
-        "source": "directory",
-        "path": "/Users/koyama/repo/koyama0318-marketplace"
-      }
-    },
-    "ui-ux-pro-max-skill": {
-      "source": {
-        "source": "github",
-        "repo": "nextlevelbuilder/ui-ux-pro-max-skill"
-      }
     }
-  },
-  "language": "Japanese",
-  "skipDangerousModePermissionPrompt": true,
-  "teammateMode": "tmux"
+  }
 }

@@ -6,7 +6,7 @@ font-size = 12
 window-padding-x = 12
 window-padding-y = 0
 maximize = true
-background-opacity = 0.95
+background-opacity = 0.9
 background-blur = false
 window-decoration = true
 

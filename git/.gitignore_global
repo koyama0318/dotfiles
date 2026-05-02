@@ -20,3 +20,6 @@ ehthumbs.db
 *.temp
 .cache/
 .temp/
+
+# Claude Code
+settings.local.json

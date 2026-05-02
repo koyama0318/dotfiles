@@ -1,51 +1,47 @@
-# dotfiles
+# Dotfiles
 
-macOS の開発環境設定をまとめたリポジトリ。
+- [zsh](https://github.com/zsh-users/zsh)
+- [zinit](https://github.com/zdharma-continuum/zinit)
 
-## スタック
+- [Ghostty](https://github.com/ghostty-org/ghostty)
+- [starship](https://github.com/starship/starship)
+- [tmux](https://github.com/tmux/tmux)
 
-### シェル
-- `zsh` — シェル
-- `zinit` — Zsh プラグインマネージャ
+- [Claude Code](https://github.com/anthropics/claude-code)
 
-### ターミナル
-- `Ghostty` — メインターミナル
-- `starship` — プロンプト
+- [fzf](https://github.com/junegunn/fzf)
+- [eza](https://github.com/eza-community/eza)
+- [tree](https://github.com/kddnewton/tree)
 
-### バージョン管理
-- `git`
-
-### エディタ
-- `VS Code` — メインIDE
-- `vim` — 軽量編集用
-
-### ユーティリティ
-- `just` — タスクランナー
-- `tmux` — ターミナルマルチプレクサ
-
-## セットアップ
+## install
 
 ```sh
-sh scripts/pre-install.sh
-just
+bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
+
+brew install starship
+brew install tmux
+
+brew install eza
+brew install fzf
+brew install tree
+
+brew install gh
+
+brew install --cask font-hack-nerd-font
 ```
 
-## リセット（シンボリックリンクの削除）
+## setting files
 
-```sh
-just reset
-```
-
-## ディレクトリ構成
-
-| ディレクトリ | 内容 |
-|---|---|
-| `claude/` | Claude Code の設定 |
-| `ghostty/` | Ghostty の設定 |
-| `git/` | git の設定・グローバル gitignore |
-| `scripts/` | セットアップスクリプト群 |
-| `starship/` | starship プロンプト設定 |
-| `tmux/` | tmux 設定・レイアウト |
-| `vim/` | vim 設定 |
-| `vscode/` | VS Code 設定・拡張機能リスト |
-| `zsh/` | zsh 設定 |
+| tool        | path                                                        |
+| ----------- | ----------------------------------------------------------- |
+| zsh         | `~/.zshrc`                                                  |
+| git         | `~/.gitconfig`                                              |
+| git         | `~/.gitignore_global`                                       |
+| ghostty     | `~/.config/ghostty/config`                                  |
+| starship    | `~/.config/starship.toml`                                   |
+| vscode      | `~/Library/Application\ Support/Code/User/settings.json`    |
+| vscode      | `~/Library/Application\ Support/Code/User/keybindings.json` |
+| vim         | `~/Library/Application\ Support/Code/User/settings.json`    |
+| tmux        | `~/.tmux.conf`                                              |
+| claude code | `~/.claude/settings.json`                                   |
+| claude code | `~/.claude/statusline-command.sh`                           |
